@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- COUNTRY SECTION -->
+    <div class="mainDiv">
+        <div class="bigDiv">
+          <h4 class="eachHead text-center fw-bold">{{ country['name'] }}</h4>
+          <div class="imageDiv" style="background-image: url('{{ country['flag'] }}');"></div>
+          <div class="informDiv">
+            <p><b>Native Name:</b> {{ country['native_name'] }}</p>
+            <p><b>Population:</b> {{ country['population'] }}</p>
+            <p><b>Region:</b> {{ country['region'] }}</p>
+            <p><b>Sub Region:</b> {{ country['sub_region'] }}</p>
+            <p><b>Capital:</b> {{ country['capital'] }}</p>
+            <p><b>Currency:</b> {{ country['currency'] }}</p>
+          </div>
+        </div>
+      <div class="text-end">
+        <a class="backButton btn btn-primary" href="{{ url_for('search_page', region=country['region']) }}">
+          <i class="bi bi-arrow-left"></i>&nbsp; Back
+        </a>
+      </div>
+    </div>
+{% endblock %}

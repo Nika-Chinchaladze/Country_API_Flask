@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- SEARCH & FILTER SECTION -->
+    <div class="filterDiv">
+          <div class="searchInput">
+              <i class="bi bi-search fw-bold searchIcon"></i>
+              <input id="userInput" class="searchBar" type="text" name="search" placeholder="Search for a country...">
+          </div>
+          <div class="comboDiv">
+            <select id="regions" name="forma" onchange="location = this.value;">
+                <option value="/">Filter by Region</option>
+                <option value="/search/africa">Africa</option>
+                <option value="/search/america">America</option>
+                <option value="/search/asia">Asia</option>
+                <option value="/search/europe">Europe</option>
+                <option value="/search/oceania">Oceania</option>
+            </select>
+          </div>
+    </div>
+
+    <!-- COUNTRY CARDS SECTION -->
+    <div class="countryDiv">
+      <!-- here each country will be generated -->
+      {% for country in country_list: %}
+        <div class="cardDiv">
+          <div class="flagDiv" style="background-image: url('{{ country['flag'] }}');"></div>
+          <div class="informationDiv">
+            <h4 class="countryHead">
+                <a href="{{ url_for('country_page', country=country['country']) }}">{{ country['country'] }}</a>
+            </h4>
+            <p><b>Population:</b> {{ country['population'] }}</p>
+            <p><b>Region:</b> {{ country['region'] }}</p>
+            <p><b>Capital:</b> {{ country['capital'] }}</p>
+          </div>
+        </div>
+      {% endfor %}
+
+    </div>
+    <p class="text-center myP">Created By Nika Chinchaladze</p>
+{% endblock %}

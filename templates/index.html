@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <!-- CENTRAL PART -->
+    <div class="chooseHead">
+        <select id="regionSelect" name="forma" onchange="location = this.value;">-->
+            <option class="choice" value="/">Choose Region</option>
+            <option class="choice" value="/search/africa">Africa</option>
+            <option class="choice" value="/search/america">America</option>
+            <option class="choice" value="/search/asia">Asia</option>
+            <option class="choice" value="/search/europe">Europe</option>
+            <option class="choice" value="/search/oceania">Oceania</option>
+        </select>
+    </div>
+    <p class="text-center myP">Created By Nika Chinchaladze</p>
+{% endblock %}
