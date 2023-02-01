@@ -2,7 +2,7 @@
 <p>Used Technologies:</p>
 <p>&nbsp;&nbsp;- Front-End: HTML / CSS / Bootstrap / JavaScript / jQuery</p>
 <p>&nbsp;&nbsp;- Back-End: Python -> Flask / Jinja / APIs</p>
-<p><a href="">Watch video on my youtube channel - How Flask Application works in action</a></p>
+<p><a href="https://www.youtube.com/watch?v=l43zLOrZ52o">Watch video on my youtube channel - Check How Flask Application works in action</a></p>
 
 # App
 ![first](https://user-images.githubusercontent.com/106172218/216175026-66d4c859-6e7b-4e10-89d9-8f2b1de3fcbc.jpg)
